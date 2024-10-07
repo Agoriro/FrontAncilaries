@@ -1,0 +1,26 @@
+[
+    {
+        "ServiceName": "Equipaje de mano",
+        "Subtittle": "10kg (22 lbs)"
+    },
+    {
+        "ServiceName": "Equipaje de bodega",
+        "Subtittle": "22kg (40 lbs)"
+    },
+    {
+        "ServiceName": "Equipaje deportivo",
+        "Subtittle": "Lleva tu equipaje deportivo"
+    },
+    {
+        "ServiceName": "Salas VIP",
+        "Subtittle": "Espera tu vuelo de la mejor manera"
+    },
+    {
+        "ServiceName": "Reserva tu asiento",
+        "Subtittle": "Elige el que más te guste"
+    },
+    {
+        "ServiceName": "Servicios especiales",
+        "Subtittle": "Solicítalos en caso de necesitarlos"
+    }
+]

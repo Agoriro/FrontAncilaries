@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --background-filter: blur:10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 255, 255, 255;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.hrFlight {
+  @apply px-2;
+  border-bottom-width: 2px;
+  border-bottom-color: #316BB2;
+  width: 48%;
+}
+
+.hrGeneral {
+  @apply px-2;
+  border-bottom-width: 2px;
+  border-bottom-color: #316BB2;
+  width: 100%;
+}
+
+.hrGrey {
+  @apply px-2;
+  border-bottom-width: 0.1vh;
+  border-bottom-color: #585858;
+  opacity: 0.30;
+  width: 100%;
+}
+
+.collapse-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-out;
+}
+
+.collapse-container.open {
+  max-height: 1000px; /* Puedes ajustar este valor según la altura máxima deseada */
+}
+
+.gridAdjustCols {
+  grid-template-columns: 30% 1fr;
+}
+
+.containerGridPayment {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+.color-split__modal {
+  background:linear-gradient(to left, #F2F2F2 65%, #ffffff 35%);
+}
+
+/* SPINNER DE CARGA */
+.lds-ellipsis,
+.lds-ellipsis div {
+  box-sizing: border-box;
+}
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33.33333px;
+  width: 13.33333px;
+  height: 13.33333px;
+  border-radius: 50%;
+  background: currentColor;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #F2F2F2;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #b9b9b9;
+  border-radius: 8px;
+}

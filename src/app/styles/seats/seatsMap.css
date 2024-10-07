@@ -1,0 +1,31 @@
+.seat-map {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Ajustar según el número de columnas */
+    grid-gap: 15px;
+  }
+  
+  .seat {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 25%;
+  }
+  
+  .available {
+    background-color: #005eb8; /* Azul */
+  }
+  
+  .unavailable {
+    background-color: gray;
+  }
+  
+  .selected {
+    background-color: #57b10e; /* Verde */
+  }
+  
+  .aisle-spacer {
+    width: 30px;
+    height: 30px;
+    border: 1px solid red;
+  }

@@ -1,0 +1,85 @@
+.seat-selection {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .passenger-list {
+    margin-right: 20px;
+  }
+  
+  .passenger-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .passenger-list li {
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+  }
+  
+  .passenger-list li.selected {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .seat-map {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .seat-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .seat-group {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .seat {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .seat.available {
+    background-color: #28a745;
+  }
+  
+  .seat.unavailable {
+    background-color: #dc3545;
+    cursor: not-allowed;
+  }
+  
+  .seat.selected {
+    border-color: #007bff;
+    background-color: #ffc107;
+  }
+  
+  .seat-group .seat:nth-child(3) {
+    margin-right: 30px; /* Espacio para el pasillo */
+  }
+  
+  .buttonSeat {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    align-self: center;
+  }
+  
+  button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  

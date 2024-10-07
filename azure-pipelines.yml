@@ -1,0 +1,36 @@
+trigger:
+  - main  # o master, según tu rama principal
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  azureSubscription: '5981686b-ee8c-4497-93f3-55fcd0585390'
+  webAppName: 'Ancillares'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '20.x'
+  displayName: 'Install Node.js'
+    
+- script: |
+    npm install
+    npm run build
+  displayName: 'npm install and build'
+    
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+    
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: '$(azureSubscription)'
+    appType: 'webApp'
+    appName: '$(webAppName)'
+    package: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    startUpCommand: 'node server.js'

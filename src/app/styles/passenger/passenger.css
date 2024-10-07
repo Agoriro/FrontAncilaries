@@ -1,0 +1,94 @@
+.passenger-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .passenger-card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .passenger-card:hover {
+    background-color: #e6f7ff;
+  }
+  
+  .passenger-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .passenger-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .passenger-name {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .passenger-seat {
+    color: gray;
+    font-size: 14px;
+  }
+
+
+  h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #4A4A4A; /* Color de texto similar al de la imagen */
+  }
+  
+  .passenger-container {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #7A7A7A; /* Color de texto similar al de la imagen */
+  }
+  
+  .passenger-container div:first-child {
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+  }
+  
+  .passenger-icon {
+    display: flex;
+    align-items: center;
+  }
+  
+  .passenger-icon svg {
+    width: 80px;
+    height: 80px;
+    color: #7A7A7A; /* Color del ícono similar al de la imagen */
+  }
+  
+  .passenger-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .remove-seat {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+  }
+  
+  .remove-seat:hover {
+    color: darkred;
+  }
