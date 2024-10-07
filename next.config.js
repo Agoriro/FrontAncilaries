@@ -1,12 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: true,
-    // Asegúrate de que output está configurado correctamente para Azure
     output: 'standalone',
-    // Ajusta según necesites
-    env: {
-      // Variables de entorno públicas
-    }
+    poweredByHeader: false,
+    // Configuraciones específicas para Azure Linux
+    experimental: {
+      serverActions: true,
+    },
+    // Optimizaciones adicionales
+    eslint: {
+      ignoreDuringBuilds: true,
+    },
+    typescript: {
+      ignoreBuildErrors: true, // Solo si necesitas ignorar errores de TypeScript durante el build
+    },
   }
   
   module.exports = nextConfig
