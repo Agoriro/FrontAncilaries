@@ -1,4 +1,8 @@
 {
     "appService.defaultWebAppToDeploy": "/subscriptions/5981686b-ee8c-4497-93f3-55fcd0585390/resourceGroups/ancillares_group/providers/Microsoft.Web/sites/ancillares",
-    "appService.deployToSlotOrASE": false
+    "appService.deployToSlotOrASE": false,
+    "appService.zipIgnorePattern": [
+      "node_modules{,/**}",
+      ".vscode{,/**}"
+    ]
   }
