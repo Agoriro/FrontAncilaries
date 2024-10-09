@@ -2,10 +2,6 @@
 const nextConfig = {
     output: 'standalone',
     poweredByHeader: false,
-    // Configuraciones específicas para Azure Linux
-    experimental: {
-      serverActions: true,
-    },
     // Optimizaciones adicionales
     eslint: {
       ignoreDuringBuilds: true,

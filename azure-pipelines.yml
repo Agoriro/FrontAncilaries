@@ -48,7 +48,16 @@ stages:
             displayName: 'Download Pipeline Artifact'
             inputs:
               buildType: current
-            
+          - task: NodeTool@0
+            inputs:
+              versionSpec: '20.x'
+            displayName: 'Install Node.js'
+        
+          - script: |
+              npm install
+              npm run build
+            displayName: 'npm install and build'
+
           - task: AzureWebApp@1
             displayName: 'Azure Web App Deploy'
             inputs:
@@ -57,7 +66,7 @@ stages:
               appName: $(webAppName)
               package: '$(System.ArtifactsDirectory)/drop/$(Build.BuildId).zip'
               runtimeStack: 'NODE|20-lts'
-              startUpCommand: 'npm run build && npm run start'
+              startUpCommand: 'npm ci && npm run start'
               cleanTargetFolder: true
               deploymentMethod: 'auto'
 
